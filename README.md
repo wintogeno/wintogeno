@@ -13,6 +13,8 @@ I am Devops Engineer<br>I am Currently Working in Micromerger<br>I am Learning T
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=wintogeno&theme=dark&hide_border=false&include_all_commits=true&count_private=true&layout=compact)
 
 ---
-[![](https://visitcount.itsvg.in/api?id=wintogeno&icon=0&color=0)](https://visitcount.itsvg.in)
+<a href="https://visitcount.itsvg.in">
+  <img src="https://visitcount.itsvg.in/api?id=wintogeno&label=Profile%20Views&color=0&icon=0&pretty=false" />
+</a>
 
 <!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
