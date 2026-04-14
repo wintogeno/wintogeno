@@ -1,13 +1,63 @@
-# 💫 About Me:
-I am Azure Devops Engineer<br><br>I am Learning Terraform , Azure<br>My expertise includes writing Helm charts, creating CI/CD pipelines with GitHub Actions and Jenkins, and using Terraform for infrastructure automation<br>I have worked on managing cloud infrastructure, such as AWS EKS clusters, S3 for data storage and hosting, and Route 53 for domain management.<br>My projects span cloud-native deployments, using microservices architecture, blue-green deployments, and reducing application downtime through PM2 services.<br><br>Key Skills:<br><br>Cloud Platforms: AWS, Azure<br>Orchestration: Kubernetes, Docker, Helm<br>CI/CD Tools: Jenkins, GitHub Actions<br>Infrastructure as Code: Terraform<br>Monitoring: Grafana<br>Scripting: Shell for backup automation and cloud resource management
+# Hi, I'm Muhammad Muneeb 👋
+### Modern DevOps Engineer | Multi-Platform Infrastructure | AI-Driven Automation
 
+I design, automate, and operate production platforms across Linux, Windows, and cloud-native environments.
+I focus on secure, scalable systems, fast release pipelines, and resilient operations in complex workloads.
 
-## 🌐 Socials:
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/muhammad-muneeb-4a46b5194) [![Medium](https://img.shields.io/badge/Medium-12100E?logo=medium&logoColor=white)](https://medium.com/@muneem361) 
+## 🔄 Key Profile Updates
+- Expanded from a cloud-only focus to end-to-end, multi-platform DevOps delivery
+- Added complex operations coverage: Kubernetes at scale, GitOps workflows, and incident response
+- Included AI-assisted engineering for automation, troubleshooting, and faster delivery
+- Highlighted full toolchain ownership from code integration to production observability
 
-# 💻 Tech Stack:
-![Shell Script](https://img.shields.io/badge/shell_script-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white) ![YAML](https://img.shields.io/badge/yaml-%23ffffff.svg?style=for-the-badge&logo=yaml&logoColor=151515) ![Windows Terminal](https://img.shields.io/badge/Windows%20Terminal-%234D4D4D.svg?style=for-the-badge&logo=windows-terminal&logoColor=white) ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white) ![Azure](https://img.shields.io/badge/azure-%230072C6.svg?style=for-the-badge&logo=microsoftazure&logoColor=white) ![DigitalOcean](https://img.shields.io/badge/DigitalOcean-%230167ff.svg?style=for-the-badge&logo=digitalOcean&logoColor=white) ![GithubPages](https://img.shields.io/badge/github%20pages-121013?style=for-the-badge&logo=github&logoColor=white) ![Linode](https://img.shields.io/badge/linode-00A95C?style=for-the-badge&logo=linode&logoColor=white) ![Apache](https://img.shields.io/badge/apache-%23D42029.svg?style=for-the-badge&logo=apache&logoColor=white) ![Apache Airflow](https://img.shields.io/badge/Apache%20Airflow-017CEE?style=for-the-badge&logo=Apache%20Airflow&logoColor=white) ![Jenkins](https://img.shields.io/badge/jenkins-%232C5263.svg?style=for-the-badge&logo=jenkins&logoColor=white) ![Nginx](https://img.shields.io/badge/nginx-%23009639.svg?style=for-the-badge&logo=nginx&logoColor=white) ![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white) ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white) ![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white) ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white) ![SQLite](https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white) ![Redis](https://img.shields.io/badge/redis-%23DD0031.svg?style=for-the-badge&logo=redis&logoColor=white) ![GitLab CI](https://img.shields.io/badge/gitlab%20CI-%23181717.svg?style=for-the-badge&logo=gitlab&logoColor=white) ![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white) ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white) ![GitLab](https://img.shields.io/badge/gitlab-%23181717.svg?style=for-the-badge&logo=gitlab&logoColor=white) ![Kubernetes](https://img.shields.io/badge/kubernetes-%23326ce5.svg?style=for-the-badge&logo=kubernetes&logoColor=white) ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white) ![ElasticSearch](https://img.shields.io/badge/-ElasticSearch-005571?style=for-the-badge&logo=elasticsearch) ![Terraform](https://img.shields.io/badge/terraform-%235835CC.svg?style=for-the-badge&logo=terraform&logoColor=white) ![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=for-the-badge&logo=Prometheus&logoColor=white) ![Trello](https://img.shields.io/badge/Trello-%23026AA7.svg?style=for-the-badge&logo=Trello&logoColor=white)
-# 📊 GitHub Stats:
+## 🚀 What I Do
+- Build cross-platform CI/CD pipelines with GitHub Actions, GitLab CI, Jenkins, and Azure DevOps
+- Provision reproducible infrastructure using Terraform, Helm, and automation scripts
+- Deploy and manage containerized workloads with Kubernetes, Docker, and GitOps practices
+- Improve reliability with Prometheus/Grafana monitoring, alerts, and operational runbooks
+- Deliver safer releases using blue-green/canary deployments and rollback strategies
+- Partner with engineering and security teams to implement practical DevSecOps controls
+
+## 🧩 Complex Delivery & Operations Work
+- Orchestrate consistent environments across development, staging, and production
+- Perform root-cause analysis with logs, metrics, and traces under high-pressure incidents
+- Optimize workload performance and cost across different cloud and platform targets
+- Automate repetitive operations tasks such as backups, patching, and health checks
+
+## 🤖 AI + DevOps Knowledge
+- Use AI assistants to speed up scripting, pipeline development, and infra troubleshooting
+- Design AI-assisted workflows for incident triage, documentation, and operational support
+- Apply prompt engineering and agent-based tooling to reduce manual toil in complex systems
+
+## 🛠 Core Skills
+- **Cloud & Platforms:** Azure, AWS, Linux, Windows Server
+- **Containers & Orchestration:** Kubernetes, Docker, Helm, Argo CD
+- **CI/CD & Automation:** GitHub Actions, GitLab CI, Jenkins, Azure DevOps, Bash, Python
+- **Infrastructure as Code:** Terraform, Ansible
+- **Observability & Reliability:** Prometheus, Grafana, alerting, SLI/SLO-based monitoring
+- **Datastores:** MySQL, PostgreSQL, MongoDB, Redis
+
+## 🌐 Connect With Me
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/muhammad-muneeb-4a46b5194)
+[![Medium](https://img.shields.io/badge/Medium-12100E?logo=medium&logoColor=white)](https://medium.com/@muneem361)
+
+## 💻 Tech Stack
+![Azure](https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![Terraform](https://img.shields.io/badge/Terraform-844FBA?style=for-the-badge&logo=terraform&logoColor=white)
+![Ansible](https://img.shields.io/badge/Ansible-EE0000?style=for-the-badge&logo=ansible&logoColor=white)
+![Argo%20CD](https://img.shields.io/badge/ArgoCD-EF7B4D?style=for-the-badge&logo=argo&logoColor=white)
+![Azure%20DevOps](https://img.shields.io/badge/Azure_DevOps-0078D7?style=for-the-badge&logo=azure-devops&logoColor=white)
+![Jenkins](https://img.shields.io/badge/Jenkins-D24939?style=for-the-badge&logo=jenkins&logoColor=white)
+![GitHub%20Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+![Grafana](https://img.shields.io/badge/Grafana-F46800?style=for-the-badge&logo=grafana&logoColor=white)
+![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=for-the-badge&logo=prometheus&logoColor=white)
+
+## 📊 GitHub Stats
 ![](https://github-readme-stats.vercel.app/api?username=wintogeno&theme=dark&hide_border=false&include_all_commits=true&count_private=true)<br/>
 ![](https://github-readme-streak-stats.herokuapp.com/?user=wintogeno&theme=dark&hide_border=false)<br/>
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=wintogeno&theme=dark&hide_border=false&include_all_commits=true&count_private=true&layout=compact)
@@ -16,5 +66,3 @@ I am Azure Devops Engineer<br><br>I am Learning Terraform , Azure<br>My expertis
 <a href="https://visitcount.itsvg.in">
   <img src="https://visitcount.itsvg.in/api?id=wintogeno&label=Profile%20Views&color=0&icon=0&pretty=false" />
 </a>  
-
-<!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
