@@ -65,10 +65,7 @@ export default function Header() {
             <button
               key={item.id}
               onClick={() => scrollToSection(item.id)}
-              className="nav-link"
-              style={{
-                color: activeSection === item.id ? '#06b6d4' : '',
-              }}
+              className={`nav-link ${activeSection === item.id ? 'text-cyan-400' : ''}`}
             >
               {item.label}
             </button>
