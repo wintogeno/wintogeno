@@ -1,4 +1,4 @@
-# Hi, I'm Muhammad Muneeb 👋
+# Hi, I'm Muhammad Muneeb 
 ### Modern DevOps Engineer | Multi-Platform Infrastructure | AI-Driven Automation
 
 I design, automate, and operate production platforms across Linux, Windows, and cloud-native environments.
