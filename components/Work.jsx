@@ -3,7 +3,7 @@ const experiences = [
     title: 'Azure DevOps Engineer',
     company: 'Micromerger',
     location: 'Islamabad, Pakistan',
-    period: 'Dec 2023 – Present',
+    period: 'Dec 2024 – Present',
     type: 'Full-Time',
     description: 'A technology company focusing on cloud and DevOps solutions',
     color: '#06b6d4',
