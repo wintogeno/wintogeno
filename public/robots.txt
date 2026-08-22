@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Host: https://muneebdevops.online
+Sitemap: https://muneebdevops.online/sitemap.xml

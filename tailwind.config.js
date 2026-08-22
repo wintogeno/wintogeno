@@ -1,24 +1,26 @@
 module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
-    './components/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,jsx,tsx}',
   ],
   theme: {
     extend: {
       colors: {
-        slate: {
-          950: '#030712',
-          900: '#0f172a',
-          800: '#1e293b',
-          700: '#334155',
-          600: '#475569',
-          500: '#64748b',
-          400: '#94a3b8',
-          300: '#cbd5e1',
-          200: '#e2e8f0',
-          100: '#f1f5f9',
-          50: '#f8fafc',
-        },
+        ink: '#0b0c0a',
+        panel: '#141613',
+        paper: '#efe6d4',
+        kraft: '#e4d8bf',
+        signal: '#e23d2a',
+        mint: '#3ee0a0',
+        sand: '#c9b896',
+      },
+      fontFamily: {
+        display: ['Syne', 'sans-serif'],
+        sans: ['Figtree', 'sans-serif'],
+        mono: ['IBM Plex Mono', 'monospace'],
+      },
+      letterSpacing: {
+        tightest: '-0.06em',
       },
     },
   },

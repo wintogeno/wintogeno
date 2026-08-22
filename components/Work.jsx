@@ -1,119 +1,110 @@
 const experiences = [
   {
+    n: '04',
+    title: 'DevOps Engineer',
+    company: 'Cytomate',
+    loc: 'Islamabad',
+    period: 'Mar 2025 — Present',
+    blurb: 'Own production and development AKS for Cytomate’s cybersecurity products.',
+    points: [
+      'AKS for SARAB, ASM, BreachPlus, and BattleTwin — high availability, zero-downtime releases.',
+      'WAF-enabled Application Gateway with diagnostic/access logs and backend health probes across dev, staging, and production.',
+      'APIM: rate-limiting, IP filtering, authentication for multi-tenant APIs.',
+      'Azure DevOps + GitLab (self-hosted runners), ACR, staging slots, secret injection.',
+      'Function Apps, Azure AI Foundry (Mistral), containerized embeddings.',
+      'Implemented a Hub and Spoke GitOps model with FluxCD and Kustomize overlays for consistent, auditable multi-cluster delivery.',
+      'AWS patient portal via Terraform: ECS task definitions, container health checks, target groups, security groups, load-balancer probes, Fargate, Aurora, ElastiCache, EFS, CloudFront, OIDC GitLab CI.',
+      'Wildcard TLS, Entra ID, Conditional Access, RBAC. Multi-subscription cost audit.',
+    ],
+  },
+  {
+    n: '03',
     title: 'Azure DevOps Engineer',
     company: 'Micromerger',
-    location: 'Islamabad, Pakistan',
-    period: 'Dec 2024 – Present',
-    type: 'Full-Time',
-    description: 'A technology company focusing on cloud and DevOps solutions',
-    color: '#06b6d4',
-    highlights: [
-      'Reduced Azure Blob Storage costs by <strong>30%</strong> managing 200 TB of business data securely',
-      'Reduced release cycle time by <strong>40%</strong> via Azure DevOps Pipelines',
-      'Implemented RBAC via Azure Service Principal for secure CI/CD workflows',
-      'Integrated Azure Front Door with WAF, SSL offloading and intelligent routing',
-      'Explored Azure AI Foundry for integrating AI into microservices applications',
-    ]
+    loc: 'Islamabad',
+    period: 'Dec 2024 — Apr 2025',
+    blurb: 'Cloud and DevOps delivery for large-scale Azure estates.',
+    points: [
+      'Azure Blob for 200 TB — 30% storage cost reduction.',
+      'Service Principal + RBAC for CI/CD automation.',
+      'Azure DevOps pipelines — 40% shorter release cycles.',
+      'APIM policies and Azure Front Door (WAF, SSL offload, routing).',
+      'Azure AI Foundry experiments on microservices.',
+    ],
   },
   {
+    n: '02',
     title: 'DevOps Engineer',
     company: 'Micromerger',
-    location: 'Islamabad, Pakistan',
-    period: 'Dec 2023 – Dec 2024',
-    type: 'Full-Time',
-    description: 'Platform engineering and Kubernetes cluster management at scale',
-    color: '#8b5cf6',
-    highlights: [
-      'Designed Jenkins pipelines reducing deployment time by <strong>50%</strong> and frequency by <strong>75%</strong>',
-      'Migrated 20+ applications to AWS (ECS/Docker), achieving <strong>99.99%</strong> availability',
-      'Reduced infrastructure costs by <strong>30%</strong> via IaC implementation',
-      'Integrated Kubernetes as GitLab Runner for enhanced build scalability',
-      'Enhanced Kubernetes security and availability using Istio service mesh',
-    ]
+    loc: 'Islamabad',
+    period: 'Dec 2023 — Dec 2024',
+    blurb: 'Platform engineering, Kubernetes, and AWS migration.',
+    points: [
+      'Jenkins pipeline: 50% faster deploys, 75% higher frequency.',
+      'IaC: 30% infra cost down, 20% reliability up.',
+      'Kubernetes as GitLab Runner. Istio on the mesh.',
+      '20+ apps to AWS ECS/Docker — 99.99% availability, 30% cost cut.',
+      'Commendation for VPC and peering recovery.',
+    ],
   },
   {
+    n: '01',
     title: 'DevOps Engineer',
     company: 'WideAchor Group',
-    location: 'Remote',
-    period: 'Nov 2022 – Oct 2024',
-    type: 'Remote',
-    description: 'End-to-end DevOps and cloud infrastructure for distributed teams',
-    color: '#14b8a6',
-    highlights: [
-      'Designed and maintained CI/CD pipelines for automated build, test, and deployment',
-      'Configured infrastructure as code using Terraform and Ansible',
-      'Implemented Prometheus/Grafana monitoring and anomaly detection',
-      'Supported containerization using Docker and Kubernetes',
-      'Enforced DevSecOps best practices across all pipelines',
-    ]
-  }
+    loc: 'Remote',
+    period: 'Nov 2022 — Oct 2024',
+    blurb: 'Remote DevOps and cloud infrastructure for distributed teams.',
+    points: [
+      'CI/CD for build, test, and deploy.',
+      'Terraform and Ansible for infrastructure.',
+      'Monitoring and logging: Application Gateway logs, health probes, target groups, security groups, and ECS task health.',
+      'Docker/Kubernetes containerization and DevSecOps habits.',
+    ],
+  },
 ];
 
 export default function Work() {
   return (
-    <section id="work" className="card animate-fade-in-up delay-100">
-      <h2 className="section-title">Experience</h2>
+    <section id="work" className="paper-grid text-ink">
+      <div className="px-6 md:px-12 lg:px-16 py-24">
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
+          <div>
+            <p className="font-mono text-[11px] uppercase tracking-[0.28em] text-signal mb-3">02 — Log</p>
+            <h2 className="display text-5xl md:text-7xl font-extrabold tracking-tightest">
+              Changelog
+            </h2>
+          </div>
+          <p className="max-w-xs font-mono text-[11px] uppercase tracking-widest text-ink/50">
+            Reverse chronological · as filed
+          </p>
+        </div>
 
-      <div className="relative mt-10">
-        {/* Timeline line */}
-        <div className="timeline-line" />
-
-        <div className="space-y-12 pl-8">
-          {experiences.map((exp, idx) => (
-            <div key={idx} className="relative group">
-              {/* Timeline dot */}
-              <div
-                className="timeline-dot"
-                style={{ borderColor: exp.color, boxShadow: `0 0 14px ${exp.color}88` }}
-              />
-
-              <div
-                className="p-6 rounded-2xl border transition-all duration-400 group-hover:translate-x-1"
-                style={{
-                  background: `linear-gradient(135deg, ${exp.color}08, transparent)`,
-                  borderColor: `${exp.color}22`,
-                }}
-              >
-                {/* Header */}
-                <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-3 mb-4">
-                  <div>
-                    <h3
-                      className="text-xl font-bold mb-1"
-                      style={{ color: exp.color }}
-                    >
-                      {exp.title}
-                    </h3>
-                    <div className="flex items-center gap-2 flex-wrap">
-                      <span className="text-slate-100 font-semibold">{exp.company}</span>
-                      <span className="text-slate-600">•</span>
-                      <span className="text-xs text-slate-400">{exp.location}</span>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-2 shrink-0">
-                    <span
-                      className="text-[10px] font-bold px-2 py-1 rounded-lg uppercase tracking-wider"
-                      style={{ background: `${exp.color}22`, color: exp.color }}
-                    >
-                      {exp.type}
-                    </span>
-                    <span className="text-sm font-mono text-slate-400 bg-slate-800/50 px-3 py-1 rounded-full border border-slate-700">
-                      {exp.period}
-                    </span>
-                  </div>
-                </div>
-
-                <p className="text-sm text-slate-400 italic mb-4">{exp.description}</p>
-
-                <ul className="space-y-2.5">
-                  {exp.highlights.map((h, i) => (
-                    <li key={i} className="flex gap-3 items-start text-sm text-slate-300">
-                      <span style={{ color: exp.color }} className="shrink-0 mt-0.5">▹</span>
-                      <span dangerouslySetInnerHTML={{ __html: h }} />
+        <div className="space-y-0 border-t border-ink/15">
+          {experiences.map((exp) => (
+            <article
+              key={exp.n + exp.company + exp.title}
+              className="grid grid-cols-1 lg:grid-cols-12 gap-6 py-12 border-b border-ink/15"
+            >
+              <div className="lg:col-span-3">
+                <p className="display text-5xl font-extrabold text-signal leading-none">{exp.n}</p>
+                <p className="font-mono text-[11px] mt-4 tracking-widest uppercase">{exp.period}</p>
+                <p className="font-mono text-[11px] mt-1 text-ink/50 uppercase tracking-widest">{exp.loc}</p>
+              </div>
+              <div className="lg:col-span-9">
+                <p className="display text-3xl md:text-4xl font-bold tracking-tight">
+                  {exp.title}
+                </p>
+                <p className="mt-1 text-lg font-medium text-ink/70">{exp.company}</p>
+                <p className="mt-4 italic text-ink/60">{exp.blurb}</p>
+                <ul className="mt-6 grid md:grid-cols-2 gap-x-8 gap-y-2">
+                  {exp.points.map((p) => (
+                    <li key={p} className="text-sm leading-relaxed pl-4 border-l-2 border-signal/40">
+                      {p}
                     </li>
                   ))}
                 </ul>
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </div>

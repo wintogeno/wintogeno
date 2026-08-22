@@ -1,65 +1,65 @@
-export default function WhatIDo() {
-  const services = [
-    {
-      icon: '🚀',
-      title: 'CI/CD Pipeline Design',
-      desc: 'Automated delivery pipelines using Jenkins, GitLab CI, and Azure DevOps to minimize time-to-production.',
-      color: '#06b6d4',
-    },
-    {
-      icon: '☁️',
-      title: 'Cloud Architecture',
-      desc: 'Azure and AWS infrastructure design including networking, compute, storage, and high-availability setups.',
-      color: '#8b5cf6',
-    },
-    {
-      icon: '🐳',
-      title: 'Kubernetes & Containers',
-      desc: 'Production-grade Kubernetes cluster management, Helm deployments, and Istio service mesh configuration.',
-      color: '#14b8a6',
-    },
-    {
-      icon: '🏗️',
-      title: 'Infrastructure as Code',
-      desc: 'Reproducible environments using Terraform and Ansible for consistent, auditable infrastructure.',
-      color: '#f59e0b',
-    },
-    {
-      icon: '📊',
-      title: 'Observability & Reliability',
-      desc: 'Prometheus + Grafana monitoring, alerting, and SLO-based reliability engineering.',
-      color: '#ec4899',
-    },
-    {
-      icon: '🔒',
-      title: 'DevSecOps',
-      desc: 'RBAC, IAM, WAF, API management, and security controls embedded into every pipeline.',
-      color: '#34d399',
-    },
-  ];
+const services = [
+  {
+    n: 'A1',
+    title: 'AKS & Kubernetes',
+    desc: 'Production and development clusters, rolling updates, zero-downtime releases across product lines.',
+  },
+  {
+    n: 'A2',
+    title: 'CI/CD & GitOps',
+      desc: 'Azure DevOps, GitLab self-hosted runners, and a Hub and Spoke GitOps model with FluxCD, Argo CD, and Kustomize overlays.',
+  },
+  {
+    n: 'A3',
+    title: 'Secure ingress',
+    desc: 'Application Gateway with WAF, load balancers, APIM rate-limits, IP filters, and tenant auth.',
+  },
+  {
+    n: 'A4',
+    title: 'Infrastructure as code',
+    desc: 'Terraform for Azure and AWS — ECS Fargate, Aurora, ElastiCache, EFS, CloudFront — plus Ansible.',
+  },
+  {
+    n: 'A5',
+    title: 'AI & serverless',
+    desc: 'Function Apps, Azure AI Foundry with Mistral, containerized embedding services on the product path.',
+  },
+  {
+    n: 'A6',
+    title: 'Monitoring & health',
+    desc: 'Application Gateway diagnostic and access logs. Target groups, security groups, and health probes on the load balancer. ECS task definitions with container health checks so only healthy tasks take traffic. Prometheus and Grafana on the clusters.',
+  },
+];
 
+export default function WhatIDo() {
   return (
-    <section id="what-i-do" className="card animate-fade-in-up delay-100">
-      <h2 className="section-title">What I Do</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-10">
-        {services.map((svc, i) => (
-          <div
-            key={i}
-            className="group p-5 rounded-2xl border transition-all duration-400 hover:-translate-y-1 cursor-default"
-            style={{
-              background: `${svc.color}06`,
-              borderColor: `${svc.color}20`,
-            }}
+    <section id="what-i-do" className="px-6 md:px-12 lg:px-16 py-24 border-t border-paper/10">
+      <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
+        <div>
+          <p className="section-index mb-3">Capabilities</p>
+          <h2 className="display text-5xl md:text-7xl font-extrabold tracking-tightest">
+            What I run
+          </h2>
+        </div>
+        <p className="max-w-sm text-sand text-sm leading-relaxed">
+          Not a service menu. These are the systems I actually operate — clusters,
+          pipelines, edges, and the identity layer around them.
+        </p>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 border-t border-l border-paper/10">
+        {services.map((s) => (
+          <article
+            key={s.n}
+            className="group p-8 border-r border-b border-paper/10 hover:bg-paper hover:text-ink transition-colors duration-300"
           >
-            <div
-              className="w-10 h-10 rounded-xl flex items-center justify-center text-xl mb-4 transition-transform duration-300 group-hover:scale-110"
-              style={{ background: `${svc.color}15` }}
-            >
-              {svc.icon}
+            <div className="flex items-center justify-between mb-10">
+              <span className="tick text-signal group-hover:text-ink">{s.n}</span>
+              <span className="tick opacity-0 group-hover:opacity-100">active</span>
             </div>
-            <h3 className="font-bold text-slate-100 mb-2 text-sm">{svc.title}</h3>
-            <p className="text-xs text-slate-400 leading-relaxed">{svc.desc}</p>
-          </div>
+            <h3 className="display text-2xl font-bold mb-3 tracking-tight">{s.title}</h3>
+            <p className="text-sm leading-relaxed text-sand group-hover:text-ink/70">{s.desc}</p>
+          </article>
         ))}
       </div>
     </section>

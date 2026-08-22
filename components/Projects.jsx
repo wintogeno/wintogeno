@@ -1,104 +1,80 @@
 const projects = [
   {
-    number: '01',
-    name: 'CI/CD Pipeline Automation',
-    description: 'Architected high-performance multi-stage delivery pipelines across Jenkins and Azure DevOps, dramatically improving engineering velocity.',
-    metrics: [
-      { label: 'Faster Deployments', value: '50%' },
-      { label: 'Release Frequency', value: '+75%' },
-      { label: 'Release Cycle Cut', value: '40%' },
-    ],
-    tags: ['Jenkins', 'Azure DevOps', 'Istio', 'Kubernetes', 'GitLab CI'],
-    gradient: 'linear-gradient(135deg, #06b6d490 0%, #0ea5e940 100%)',
-    border: '#06b6d430',
-    glow: 'rgba(6,182,212,0.08)',
+    n: '03',
+    name: 'AKS + App Gateway',
+    kicker: 'Cytomate platform',
+    desc: 'Production and development AKS for SARAB, ASM, BreachPlus, and BattleTwin. Traffic lands on Azure Application Gateway (WAF). Gateway diagnostic logs, backend health probes, and APIM across dev, staging, and production.',
+    tags: ['AKS', 'App Gateway', 'Health probes', 'Gateway logs', 'WAF', 'APIM'],
+    wide: true,
   },
   {
-    number: '02',
-    name: 'Cloud Migration & IaC',
-    description: 'Led end-to-end migration of 20+ applications to AWS using Docker and ECS. Delivered significant cost savings and near-perfect uptime.',
-    metrics: [
-      { label: 'Apps Migrated', value: '20+' },
-      { label: 'Cost Reduction', value: '30%' },
-      { label: 'Availability', value: '99.99%' },
-    ],
-    tags: ['AWS', 'ECS', 'Terraform', 'Docker', 'Ansible'],
-    gradient: 'linear-gradient(135deg, #8b5cf690 0%, #a78bfa40 100%)',
-    border: '#8b5cf630',
-    glow: 'rgba(139,92,246,0.08)',
+    n: '02',
+    name: 'Hub and Spoke GitOps',
+    kicker: 'Delivery',
+    desc: 'Hub and Spoke GitOps with Argo CD and FluxCD: a hub cluster drives spoke clusters through GitLab and Kustomize overlays. Same delivery shape on every cluster — promotions and rollbacks auditable from git.',
+    tags: ['Hub and Spoke', 'Argo CD', 'FluxCD', 'GitLab', 'Kustomize'],
+    wide: false,
   },
   {
-    number: '03',
-    name: 'Azure Blob & Global CDN',
-    description: 'Integrated 200 TB of enterprise blob storage, and deployed Azure Front Door with WAF for global performance and enterprise-grade security.',
-    metrics: [
-      { label: 'Data Managed', value: '200 TB' },
-      { label: 'Cost Reduction', value: '30%' },
-      { label: 'Global CDN', value: 'Active' },
-    ],
-    tags: ['Azure Blob', 'Front Door', 'WAF', 'API Management', 'SSL'],
-    gradient: 'linear-gradient(135deg, #14b8a690 0%, #0d948440 100%)',
-    border: '#14b8a630',
-    glow: 'rgba(20,184,166,0.08)',
+    n: '01',
+    name: 'ECS task defs & health',
+    kicker: 'AWS platform',
+    desc: 'Patient-portal on ECS: task definitions with container health checks, images in ECR, service autoscaling on Fargate. Target groups and security groups on the load balancer, health probes so only healthy tasks register. Aurora, ElastiCache, EFS, CloudFront — Terraform plus OIDC GitLab CI.',
+    tags: ['ECS', 'Task definition', 'Health checks', 'Target groups', 'Security groups', 'ECR'],
+    wide: false,
+  },
+  {
+    n: '00',
+    name: 'Jenkins & GitLab pipelines',
+    kicker: 'Velocity',
+    desc: 'Jenkins and GitLab CI (self-hosted runners) plus Azure DevOps: build, test, deploy, ACR/ECR push. Cut deploy time and release cycles. 20+ apps onto AWS ECS. Istio on Kubernetes. 99.99% availability.',
+    tags: ['Jenkins', 'GitLab', 'Azure DevOps', 'ECS', 'ECR', 'Istio'],
+    wide: true,
   },
 ];
 
 export default function Projects() {
   return (
-    <section id="projects" className="card animate-fade-in-up delay-200">
-      <h2 className="section-title">Key Projects</h2>
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-10">
-        {projects.map((project, idx) => (
-          <div
-            key={idx}
-            className="group relative p-6 rounded-2xl transition-all duration-500 flex flex-col"
-            style={{
-              background: `linear-gradient(135deg, rgba(15,23,42,0.9), rgba(15,23,42,0.7))`,
-              border: `1px solid ${project.border}`,
-              boxShadow: `0 0 0px ${project.glow}`,
-            }}
-            onMouseEnter={e => {
-              e.currentTarget.style.boxShadow = `0 20px 60px ${project.glow}`;
-              e.currentTarget.style.transform = 'translateY(-6px)';
-            }}
-            onMouseLeave={e => {
-              e.currentTarget.style.boxShadow = `0 0 0px ${project.glow}`;
-              e.currentTarget.style.transform = 'translateY(0)';
-            }}
+    <section id="projects" className="px-6 md:px-12 lg:px-16 py-24">
+      <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
+        <div>
+          <p className="section-index mb-3">03 — Work</p>
+          <h2 className="display text-5xl md:text-7xl font-extrabold tracking-tightest">
+            Selected systems
+          </h2>
+        </div>
+        <p className="max-w-sm text-sand text-sm">
+          Platforms I built or still run — not demo repos.
+        </p>
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+        {projects.map((p) => (
+          <article
+            key={p.n}
+            className={`relative overflow-hidden border border-paper/10 bg-panel p-8 md:p-10 min-h-[280px] flex flex-col ${
+              p.wide ? 'lg:col-span-2' : ''
+            }`}
           >
-            {/* Project number */}
-            <div
-              className="text-5xl font-black mb-4 opacity-10 select-none"
-              style={{ background: project.gradient, WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}
-            >
-              {project.number}
+            <div className="absolute -right-4 -top-8 display text-[140px] font-extrabold leading-none text-paper/[0.04] select-none">
+              {p.n}
             </div>
-
-            <h3 className="text-lg font-bold text-slate-100 mb-3">{project.name}</h3>
-            <p className="text-sm text-slate-400 leading-relaxed mb-5 flex-1">{project.description}</p>
-
-            {/* Metrics */}
-            <div className="grid grid-cols-3 gap-2 mb-5 py-4 border-y border-slate-800">
-              {project.metrics.map((m, i) => (
-                <div key={i} className="text-center">
-                  <div
-                    className="text-lg font-black"
-                    style={{ background: project.gradient, WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}
-                  >
-                    {m.value}
-                  </div>
-                  <div className="text-[10px] text-slate-500 mt-0.5 leading-tight">{m.label}</div>
-                </div>
-              ))}
+            <div className="relative flex-1 flex flex-col">
+              <div className="flex items-center justify-between mb-8">
+                <span className="tick text-signal">{p.kicker}</span>
+                <span className="tick text-sand">{p.n}</span>
+              </div>
+              <h3 className="display text-3xl md:text-4xl font-bold tracking-tight mb-4">{p.name}</h3>
+              <p className={`text-sand leading-relaxed mb-8 ${p.wide ? 'max-w-2xl' : ''}`}>{p.desc}</p>
+              <div className="mt-auto flex flex-wrap gap-2">
+                {p.tags.map((t) => (
+                  <span key={t} className="tick border border-paper/15 px-3 py-1.5 text-sand">
+                    {t}
+                  </span>
+                ))}
+              </div>
             </div>
-
-            {/* Tags */}
-            <div className="flex flex-wrap gap-1.5">
-              {project.tags.map((tag, i) => (
-                <span key={i} className="skill-tag">{tag}</span>
-              ))}
-            </div>
-          </div>
+          </article>
         ))}
       </div>
     </section>
