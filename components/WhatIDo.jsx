@@ -26,8 +26,8 @@ const services = [
   },
   {
     n: 'A6',
-    title: 'Monitoring & health',
-    desc: 'Application Gateway diagnostic and access logs. Target groups, security groups, and health probes on the load balancer. ECS task definitions with container health checks so only healthy tasks take traffic. Prometheus and Grafana on the clusters.',
+    title: 'Monitoring',
+    desc: 'Grafana dashboards, Prometheus metrics and alerts, and Azure Application Insights on the application path.',
   },
 ];
 

@@ -1,9 +1,9 @@
 const experiences = [
   {
-    n: '04',
+    n: '03',
     title: 'DevOps Engineer',
     company: 'Cytomate',
-    loc: 'Islamabad',
+    loc: 'Remote',
     period: 'Mar 2025 — Present',
     blurb: 'Own production and development AKS for Cytomate’s cybersecurity products.',
     points: [
@@ -18,7 +18,7 @@ const experiences = [
     ],
   },
   {
-    n: '03',
+    n: '02',
     title: 'Azure DevOps Engineer',
     company: 'Micromerger',
     loc: 'Islamabad',
@@ -30,16 +30,6 @@ const experiences = [
       'Azure DevOps pipelines — 40% shorter release cycles.',
       'APIM policies and Azure Front Door (WAF, SSL offload, routing).',
       'Azure AI Foundry experiments on microservices.',
-    ],
-  },
-  {
-    n: '02',
-    title: 'DevOps Engineer',
-    company: 'Micromerger',
-    loc: 'Islamabad',
-    period: 'Dec 2023 — Dec 2024',
-    blurb: 'Platform engineering, Kubernetes, and AWS migration.',
-    points: [
       'Jenkins pipeline: 50% faster deploys, 75% higher frequency.',
       'IaC: 30% infra cost down, 20% reliability up.',
       'Kubernetes as GitLab Runner. Istio on the mesh.',
@@ -47,12 +37,13 @@ const experiences = [
       'Commendation for VPC and peering recovery.',
     ],
   },
+  
   {
     n: '01',
     title: 'DevOps Engineer',
     company: 'WideAchor Group',
     loc: 'Remote',
-    period: 'Nov 2022 — Oct 2024',
+    period: 'Nov 2023 — Oct 2024',
     blurb: 'Remote DevOps and cloud infrastructure for distributed teams.',
     points: [
       'CI/CD for build, test, and deploy.',
