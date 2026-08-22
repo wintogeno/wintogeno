@@ -14,7 +14,7 @@ const rowC = [
 const groups = [
   { title: 'Orchestration', items: ['Kubernetes / AKS', 'ECS / ECR', 'Task definitions', 'Autoscaling'] },
   { title: 'Delivery', items: ['Hub and Spoke', 'Argo CD', 'FluxCD', 'GitLab CI'] },
-  { title: 'Monitoring', items: ['App Gateway logs', 'Health probes', 'Target groups', 'ECS health'] },
+  { title: 'Monitoring', items: ['Grafana', 'Prometheus', 'Application Insights'] },
   { title: 'Network & edge', items: ['App Gateway', 'Security groups', 'WAF', 'APIM'] },
 ];
 
