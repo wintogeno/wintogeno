@@ -1,5 +1,15 @@
+<<<<<<< HEAD
 User-agent: *
 Allow: /
 
 Host: https://muneebdevops.online
 Sitemap: https://muneebdevops.online/sitemap.xml
+=======
+# robots.txt for Muhammad Muneeb - Senior DevOps Engineer Portfolio
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://muneebdevops.online/sitemap.xml
+Host: https://muneebdevops.online
+>>>>>>> 022ea07 (Update deployment configuration for Production)

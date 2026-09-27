@@ -1,0 +1,16 @@
+{
+  "name": "Muhammad Muneeb — Senior DevOps Engineer",
+  "short_name": "Muneeb DevOps",
+  "description": "Portfolio of Muhammad Muneeb - Senior DevOps Engineer specializing in Azure, AWS, Kubernetes, CI/CD and Cloud Infrastructure.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#030712",
+  "theme_color": "#030712",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

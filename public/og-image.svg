@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#030712"/>
+      <stop offset="50%" stop-color="#0a1024"/>
+      <stop offset="100%" stop-color="#030712"/>
+    </linearGradient>
+    <linearGradient id="cyanPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="60" result="blur"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGrad)"/>
+
+  <!-- Glowing background orbs -->
+  <circle cx="1050" cy="150" r="250" fill="#06b6d4" opacity="0.15" filter="url(#glow)"/>
+  <circle cx="150" cy="500" r="280" fill="#8b5cf6" opacity="0.15" filter="url(#glow)"/>
+
+  <!-- Border Card -->
+  <rect x="40" y="40" width="1120" height="550" rx="24" fill="#0f172a" fill-opacity="0.6" stroke="#1e293b" stroke-width="2"/>
+
+  <!-- Top Badge -->
+  <g transform="translate(80, 90)">
+    <rect width="260" height="40" rx="20" fill="#06b6d4" fill-opacity="0.12" stroke="#06b6d4" stroke-opacity="0.4" stroke-width="1.5"/>
+    <circle cx="24" cy="20" r="5" fill="#34d399"/>
+    <text x="38" y="25" fill="#34d399" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" letter-spacing="1">AVAILABLE FOR HIRE</text>
+  </g>
+
+  <!-- Name -->
+  <text x="80" y="200" fill="#f8fafc" font-family="system-ui, -apple-system, sans-serif" font-size="64" font-weight="900" letter-spacing="-1">
+    Muhammad <tspan fill="url(#textGrad)">Muneeb</tspan>
+  </text>
+
+  <!-- Job Title -->
+  <text x="80" y="255" fill="#38bdf8" font-family="system-ui, -apple-system, sans-serif" font-size="30" font-weight="700" letter-spacing="0.5">
+    Senior DevOps Engineer &amp; Cloud Infrastructure Architect
+  </text>
+
+  <!-- Description -->
+  <text x="80" y="315" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="400">
+    Azure • AWS • Kubernetes • Terraform • CI/CD Pipelines • Docker • Istio
+  </text>
+
+  <!-- Stats Boxes -->
+  <g transform="translate(80, 370)">
+    <!-- Stat 1 -->
+    <rect x="0" y="0" width="220" height="110" rx="16" fill="#1e293b" fill-opacity="0.7" stroke="#334155" stroke-width="1"/>
+    <text x="24" y="52" fill="#22d3ee" font-family="system-ui, -apple-system, sans-serif" font-size="36" font-weight="900">99.99%</text>
+    <text x="24" y="82" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="500">Uptime Achieved</text>
+
+    <!-- Stat 2 -->
+    <rect x="240" y="0" width="220" height="110" rx="16" fill="#1e293b" fill-opacity="0.7" stroke="#334155" stroke-width="1"/>
+    <text x="264" y="52" fill="#a78bfa" font-family="system-ui, -apple-system, sans-serif" font-size="36" font-weight="900">50%</text>
+    <text x="264" y="82" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="500">Faster Deployments</text>
+
+    <!-- Stat 3 -->
+    <rect x="480" y="0" width="220" height="110" rx="16" fill="#1e293b" fill-opacity="0.7" stroke="#334155" stroke-width="1"/>
+    <text x="504" y="52" fill="#2dd4bf" font-family="system-ui, -apple-system, sans-serif" font-size="36" font-weight="900">20+</text>
+    <text x="504" y="82" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="500">Apps Migrated to Cloud</text>
+
+    <!-- Stat 4 -->
+    <rect x="720" y="0" width="280" height="110" rx="16" fill="#1e293b" fill-opacity="0.7" stroke="#334155" stroke-width="1"/>
+    <text x="744" y="52" fill="#fbbf24" font-family="system-ui, -apple-system, sans-serif" font-size="36" font-weight="900">200 TB</text>
+    <text x="744" y="82" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="500">Cloud Data Managed</text>
+  </g>
+
+  <!-- URL / Footer branding -->
+  <text x="80" y="540" fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="600" letter-spacing="1">
+    MUNEEBDEVOPS.ONLINE • ISLAMABAD, PAKISTAN
+  </text>
+</svg>

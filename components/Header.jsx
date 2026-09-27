@@ -34,6 +34,19 @@ export default function Header() {
     setMobileOpen(false);
   };
 
+<<<<<<< HEAD
+=======
+  const navItems = [
+    { id: 'about', label: 'About' },
+    { id: 'work', label: 'Experience' },
+    { id: 'projects', label: 'Projects' },
+    { id: 'skills', label: 'Skills' },
+    { id: 'faq', label: 'DevOps FAQ' },
+    { id: 'education', label: 'Education' },
+    { id: 'connect', label: 'Contact' },
+  ];
+
+>>>>>>> 022ea07 (Update deployment configuration for Production)
   return (
     <>
       {/* Desktop index rail */}
