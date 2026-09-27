@@ -1,16 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://muneebdevops.online/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://muneebdevops.online/Muhammad_Muneeb_Resume.pdf</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-=======
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml"
@@ -62,6 +50,5 @@
     <lastmod>2026-09-27T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
->>>>>>> 022ea07 (Update deployment configuration for Production)
   </url>
 </urlset>

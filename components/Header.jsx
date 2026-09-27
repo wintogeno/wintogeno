@@ -1,41 +1,28 @@
 'use client';
 import { useState, useEffect } from 'react';
 
-const navItems = [
-  { id: 'about', n: '01', label: 'Index' },
-  { id: 'work', n: '02', label: 'Log' },
-  { id: 'projects', n: '03', label: 'Work' },
-  { id: 'skills', n: '04', label: 'Stack' },
-  { id: 'education', n: '05', label: 'School' },
-  { id: 'connect', n: '06', label: 'Ping' },
-];
-
 export default function Header() {
+  const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [active, setActive] = useState('about');
+  const [activeSection, setActiveSection] = useState('');
 
   useEffect(() => {
-    const onScroll = () => {
-      const ids = navItems.map((i) => i.id);
-      for (const id of [...ids].reverse()) {
-        const el = document.getElementById(id);
-        if (el && el.getBoundingClientRect().top < 160) {
-          setActive(id);
-          break;
-        }
-      }
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
     };
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const go = (id) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
-    setMobileOpen(false);
+  const scrollToSection = (id) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+      setActiveSection(id);
+      setMobileOpen(false);
+    }
   };
 
-<<<<<<< HEAD
-=======
   const navItems = [
     { id: 'about', label: 'About' },
     { id: 'work', label: 'Experience' },
@@ -46,89 +33,92 @@ export default function Header() {
     { id: 'connect', label: 'Contact' },
   ];
 
->>>>>>> 022ea07 (Update deployment configuration for Production)
   return (
-    <>
-      {/* Desktop index rail */}
-      <aside className="hidden md:flex fixed left-0 top-0 bottom-0 w-[72px] z-50 flex-col items-center justify-between py-6 border-r border-[rgba(239,230,212,0.1)] bg-ink">
-        <button onClick={() => go('about')} className="group" aria-label="Home">
-          <span className="display text-xl font-extrabold leading-none text-paper group-hover:text-signal transition-colors">
-            MM
-          </span>
-        </button>
+    <header
+      style={{
+        borderBottom: scrolled ? '1px solid rgba(6,182,212,0.15)' : '1px solid transparent',
+        background: scrolled ? 'rgba(3,7,18,0.8)' : 'transparent',
+        backdropFilter: scrolled ? 'blur(20px)' : 'none',
+        transition: 'all 0.3s ease',
+      }}
+      className="sticky top-0 z-50"
+    >
+      <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+        {/* Logo */}
+        <div className="flex items-center gap-3">
+          <div
+            className="w-10 h-10 rounded-xl flex items-center justify-center font-black text-slate-900 text-lg"
+            style={{ background: 'linear-gradient(135deg, #06b6d4, #8b5cf6)' }}
+          >
+            M
+          </div>
+          <div>
+            <p className="font-bold text-slate-100 leading-none text-sm">Muhammad Muneeb</p>
+            <p className="text-[10px] text-cyan-400 font-medium tracking-widest uppercase mt-0.5">
+              DevOps Engineer
+            </p>
+          </div>
+        </div>
 
-        <p className="rail-label tick text-sand/70">
-          Muneeb · Islamabad · AKS
-        </p>
-
-        <a
-          href="/Muhammad_Muneeb_Resume.pdf"
-          download
-          className="tick text-signal hover:text-paper"
-          style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)' }}
-        >
-          CV ↓
-        </a>
-      </aside>
-
-      {/* Mobile top bar */}
-      <header className="md:hidden sticky top-0 z-50 flex items-center justify-between px-5 py-4 bg-ink/90 backdrop-blur-md border-b border-[rgba(239,230,212,0.1)]">
-        <span className="display font-extrabold text-lg tracking-tight">MM</span>
-        <button
-          onClick={() => setMobileOpen(!mobileOpen)}
-          className="tick text-signal"
-          aria-label="Menu"
-        >
-          {mobileOpen ? 'Close' : 'Menu'}
-        </button>
-      </header>
-
-      {mobileOpen && (
-        <div className="md:hidden fixed inset-0 z-40 bg-ink pt-20 px-6">
+        {/* Desktop Nav */}
+        <nav className="hidden md:flex items-center gap-8">
           {navItems.map((item) => (
             <button
               key={item.id}
-              onClick={() => go(item.id)}
-              className="flex items-baseline gap-4 w-full py-4 border-b border-[rgba(239,230,212,0.1)]"
-            >
-              <span className="tick text-signal">{item.n}</span>
-              <span className="display text-3xl font-bold">{item.label}</span>
-            </button>
-          ))}
-          <a
-            href="/Muhammad_Muneeb_Resume.pdf"
-            download
-            className="block mt-8 tick text-signal"
-          >
-            Download CV ↓
-          </a>
-        </div>
-      )}
-
-      {/* Floating section index (desktop) */}
-      <nav className="hidden lg:flex fixed right-6 top-1/2 -translate-y-1/2 z-50 flex-col gap-3">
-        {navItems.map((item) => (
-          <button
-            key={item.id}
-            onClick={() => go(item.id)}
-            title={item.label}
-            className="group flex items-center justify-end gap-3"
-          >
-            <span
-              className={`tick opacity-0 group-hover:opacity-100 transition-opacity ${
-                active === item.id ? 'text-signal opacity-100' : 'text-sand'
-              }`}
+              onClick={() => scrollToSection(item.id)}
+              className={`nav-link ${activeSection === item.id ? 'text-cyan-400' : ''}`}
             >
               {item.label}
-            </span>
-            <span
-              className={`block h-px transition-all ${
-                active === item.id ? 'w-8 bg-signal' : 'w-4 bg-sand/40 group-hover:w-6'
-              }`}
-            />
-          </button>
-        ))}
-      </nav>
-    </>
+            </button>
+          ))}
+        </nav>
+
+        {/* CTA button */}
+        <a
+          href="mailto:muneebm361@gmail.com"
+          className="hidden md:block gradient-border-btn"
+          style={{ fontSize: '13px', padding: '9px 24px' }}
+        >
+          Hire Me
+        </a>
+
+        {/* Mobile hamburger */}
+        <button
+          onClick={() => setMobileOpen(!mobileOpen)}
+          className="md:hidden flex flex-col gap-1.5 p-2"
+          aria-label="Toggle navigation menu"
+        >
+          <span
+            className="block w-5 h-0.5 bg-cyan-400 transition-all"
+            style={{ transform: mobileOpen ? 'rotate(45deg) translateY(8px)' : '' }}
+          />
+          <span
+            className="block w-5 h-0.5 bg-cyan-400 transition-all"
+            style={{ opacity: mobileOpen ? 0 : 1 }}
+          />
+          <span
+            className="block w-5 h-0.5 bg-cyan-400 transition-all"
+            style={{ transform: mobileOpen ? 'rotate(-45deg) translateY(-8px)' : '' }}
+          />
+        </button>
+      </div>
+
+      {/* Mobile menu */}
+      {mobileOpen && (
+        <div className="md:hidden border-t border-slate-800 bg-slate-950/95 backdrop-blur-xl">
+          <div className="max-w-6xl mx-auto px-6 py-6 flex flex-col gap-4">
+            {navItems.map((item) => (
+              <button
+                key={item.id}
+                onClick={() => scrollToSection(item.id)}
+                className="text-left text-slate-300 hover:text-cyan-400 font-medium transition-colors py-1"
+              >
+                {item.label}
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
+    </header>
   );
 }

@@ -1,6 +1,4 @@
 export default function Connect() {
-<<<<<<< HEAD
-=======
   const socials = [
     {
       label: 'LinkedIn',
@@ -37,65 +35,73 @@ export default function Connect() {
     },
   ];
 
->>>>>>> 022ea07 (Update deployment configuration for Production)
   return (
-    <section id="connect" className="px-6 md:px-12 lg:px-16 py-24 border-t border-paper/10">
-      <p className="section-index mb-6">06 — Ping</p>
-      <h2 className="display text-5xl md:text-[7.5vw] font-extrabold tracking-tightest leading-[0.9] max-w-5xl">
-        If the cluster is on fire,
-        <span className="text-signal"> I already have a pager.</span>
-      </h2>
+    <section id="connect" className="card animate-fade-in-up delay-400">
+      <h2 className="section-title">Get In Touch</h2>
 
-      <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-px bg-paper/10">
-        <a
-          href="mailto:muneebm361@gmail.com"
-          className="bg-ink p-8 hover:bg-signal hover:text-paper transition-colors group"
-        >
-<<<<<<< HEAD
-          <p className="tick text-sand group-hover:text-paper/80 mb-8">Email</p>
-          <p className="display text-2xl font-bold break-all">muneebm361@gmail.com</p>
-        </a>
-        <a
-          href="tel:+923395153466"
-          className="bg-ink p-8 hover:bg-paper hover:text-ink transition-colors group"
-        >
-          <p className="tick mb-8 text-sand group-hover:text-ink/50">Phone</p>
-          <p className="display text-2xl font-bold">+92 339 5153466</p>
-        </a>
-        <a
-          href="https://linkedin.com/in/muhammad-muneeb-4a46b5194"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-ink p-8 hover:bg-mint hover:text-ink transition-colors group"
-        >
-          <p className="tick mb-8 text-sand group-hover:text-ink/50">LinkedIn</p>
-          <p className="display text-2xl font-bold">muhammad-muneeb</p>
-        </a>
-      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
+        {/* Left: Message */}
+        <div>
+          <h3 className="text-2xl font-black text-slate-100 mb-4">
+            Let&apos;s Build Something
+            <span className="gradient-text"> Together</span>
+          </h3>
+          <p className="text-slate-400 text-sm leading-relaxed mb-8">
+            I&apos;m always excited to take on new challenges in cloud infrastructure, 
+            DevOps automation, and scalable systems. Drop me a message and let&apos;s talk.
+          </p>
 
-      <div className="mt-4 flex flex-wrap gap-3">
-        <a
-          href="https://muneebdevops.online"
-          className="tick border border-paper/15 px-5 py-3 hover:border-signal hover:text-signal"
+          {/* Contact info */}
+          <div className="space-y-4 mb-8">
+            {[
+              { icon: '📧', label: 'Email', value: 'muneebm361@gmail.com', href: 'mailto:muneebm361@gmail.com' },
+              { icon: '📱', label: 'Phone', value: '+92 339 5153466', href: 'tel:+923395153466' },
+              { icon: '📍', label: 'Location', value: 'Islamabad, Pakistan', href: null },
+            ].map((item, i) => (
+              <div key={i} className="flex items-center gap-4">
+                <div
+                  className="w-10 h-10 rounded-xl flex items-center justify-center text-lg shrink-0"
+                  style={{ background: 'rgba(6,182,212,0.1)', border: '1px solid rgba(6,182,212,0.2)' }}
+                >
+                  {item.icon}
+                </div>
+                <div>
+                  <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">{item.label}</p>
+                  {item.href ? (
+                    <a href={item.href} className="text-slate-200 text-sm hover:text-cyan-400 transition-colors">
+                      {item.value}
+                    </a>
+                  ) : (
+                    <span className="text-slate-200 text-sm">{item.value}</span>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Social links */}
+          <div className="flex gap-3">
+            {socials.map((social, i) => (
+              <a
+                key={i}
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-4 py-2.5 rounded-xl text-white text-sm font-semibold transition-all duration-300 hover:scale-105"
+                style={{ background: social.gradient }}
+              >
+                {social.icon}
+                {social.label}
+              </a>
+            ))}
+          </div>
+        </div>
+
+        {/* Right: GitHub Stats */}
+        <div
+          className="p-5 rounded-2xl border"
+          style={{ background: 'rgba(15,23,42,0.7)', borderColor: 'rgba(71,85,105,0.3)' }}
         >
-          muneebdevops.online
-        </a>
-        <a
-          href="https://github.com/wintogeno"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="tick border border-paper/15 px-5 py-3 hover:border-signal hover:text-signal"
-        >
-          GitHub / wintogeno
-        </a>
-        <a
-          href="/Muhammad_Muneeb_Resume.pdf"
-          download
-          className="tick bg-paper text-ink px-5 py-3 hover:bg-signal hover:text-paper"
-        >
-          Download CV
-        </a>
-=======
           <h4 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-5">GitHub Activity</h4>
           <div className="space-y-3">
             <img
@@ -116,7 +122,6 @@ export default function Connect() {
             />
           </div>
         </div>
->>>>>>> 022ea07 (Update deployment configuration for Production)
       </div>
     </section>
   );
